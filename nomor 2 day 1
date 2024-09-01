@@ -1,0 +1,11 @@
+print("Penghitung power yang dihasilkan oleh bendungan 3000!!!")
+
+h = float(input("Masukkan ketinggian bendungan: ")) #170    #input ketinggian bendungan
+Q = float(input("Masukkan nilai debit: "))          #1300   #input debit air
+m = 1000 * Q
+g = 9.8
+megawatt = 10**6                                    #variabel untuk mengubah watt ke megawatt
+
+P = ((m * g * h) * 0.9 ) / megawatt                         #operasi power
+
+print("Power yang dihasilkan oleh bendungan sebesar", f"{P:.2f}", "Megawatt")   #output power setelah dibulatkan
