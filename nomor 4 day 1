@@ -1,0 +1,9 @@
+question = int(input("Masukkan tipe konversi uang yang akan di gunakan, masukkan 1 jika dollar ke pound dan masukkan 2 jika pound ke dollar: "))
+if question == 1:
+    dollar = float(input("Masukkan nilai dollar yang akan di konversi: "))  #input jika ingin mengkonversi dollar ke pound(menggunakan konversi tahun lama)
+    print(dollar*0.65, "Pound") #menggunakan konversi lama
+elif question == 2:
+    pound = float(input("Masukkan nilai pound yang akan di konversi: "))    #input jika ingin mengkonversi pound ke dollar(menggunakan konversi tahun 2024)
+    print(pound*1.3161, "Dollar") #menggunakan konversi terbaru
+else:
+    print("Perintah tidak ada dalam program! Silahkan coba lagi")           #output jika input yang pertama tidak valid
