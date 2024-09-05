@@ -1,1 +1,23 @@
+print("Program pencari persamaan garis tegak lurus dengan memasukan titik dari sebuah garis 3000!!!")
 
+X1 = float(input("Masukkan nilai x1: "))  #absis titik pertama garis 1                                                          
+Y1 = float(input("Masukkan nilai y1: "))  #ordinat titik pertama garis 1
+X2 = float(input("Masukkan nilai x2: "))  #absis titik kedua garis 1
+Y2 = float(input("Masukkan nilai y2: "))  #ordinat titik kedua garis 1
+
+M1 = (Y2 - Y1) / (X2 - X1)                #gradien dari garis pertama
+M2 = -1 / M1                              #gradien dari garis kedua
+
+Xmid = (X1 + X2) / 2                      #koordinat titik tengah garis 1
+Ymid = (Y1 + Y2) / 2
+
+reciprokal = M1 * -1                      #resiprokal negatif dari gradien garis 1
+
+Yintercept = Ymid - (M2 * Xmid)           #titik potong dnegan sumbu-y
+
+if (Yintercept > 0):
+    print("Titik (", X1, ",", Y1, ")", "dan titik (", X2,",", Y2, ")", "tegak lurus dengan", "y =", f"{M2:.3f}","x +", f"{Yintercept:.3f}")       #program jika tipot sb-y positif
+elif (Yintercept < 0):
+    print("Titik (", X1, ",", Y1, ")", "dan titik (", X2,",", Y2, ")", "tegak lurus dengan", "y =", f"{M2:.3f}","x -", f"{Yintercept*-1:.3f}")    #program jika tipot sb-y negatif
+elif (Yintercept == 0):
+    print("Titik (", X1, ",", Y1, ")", "dan titik (", X2,",", Y2, ")", "tegak lurus dengan", "y =", f"{M2:.3f}","x")
