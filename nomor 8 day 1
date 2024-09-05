@@ -1,0 +1,19 @@
+print("Penghitung biaya pemasangan dan total air yang di hemat oleh toilet baru 3000!!!")
+
+new_flush = 2                                                       #total liter setiap kali flush toilet baru
+old_flush = 15                                                      #total liter setiap kali flush toilet lama
+total_flush = 14                                                    #total flush sehari
+new_toilet_cost = 150                                               #harga toilet baru
+person = int(input("Masukkan jumlah penduduk: "))                   #total orang di komunitas
+
+total_toilet = person / 3                                          #total toilet per-orang
+
+total_flush = total_flush * total_toilet
+
+new_toilet = new_flush * total_flush                                #total flush toilet baru
+old_toilet = old_flush * total_flush                                #total flush toilet lama
+hemat = old_toilet - new_toilet
+total_cost = new_toilet_cost * total_toilet                         #total harga toilet baru di komunitas
+
+print("Total biaya = $", total_cost)
+print("Air yang dihemat = ", f"{hemat:.2f}", "liter")
