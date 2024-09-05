@@ -1,0 +1,15 @@
+print("Penghitung nilai akhir yang dibutuhkan agar mencapai nilai yang diinginkan 3000!!!")
+
+nilai_akhir = str(input("Masukkan nilai yang di inginkan: "))                           #inout nilai dalam bentuk huruf
+nilai_min = float(input("Masukkan nilai minimum: "))                                    #input nilai yang dibutuhkan untuk mendapat huruf
+nilai_sekarang = float(input("Masukkan rata rata sekarang: "))                          #input nilai rata-rata saat ini
+persen = float(input("Masukkan persentase nilai ujian akhir: "))                        #input seberapa besar nilai ujian akhir akan diambil dalam bentuk persentase
+
+nilai = (nilai_min - nilai_sekarang * (1 - (persen / 100))) * 100 / persen              #hasil nilai secara kasar
+
+if (nilai < 1):
+    print("Nilai yang dimasukkan tidak valid, mohon cek kembali nilai yang di input!!") #output jika nilai tidak valid
+elif (nilai > 100):
+    print("Nilai yang di inginkan terlalu tinggi!!")                                    #output jika nilai yang diinginkan terlalu tinggi
+elif (nilai <= 100):
+    print(f"Kamu butuh nilai {nilai:.2f} untuk mendapat nilai", nilai_akhir)      #output jika nilai berhasil di hitung + dibulatkan
